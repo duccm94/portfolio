@@ -31,8 +31,8 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import type { TimelineEvent } from '~/types/TimelineEvent';
-import { timelineEvents } from '~/data/timelineData';
+import type { TimelineEvent } from '@/types/TimelineEvent';
+import { timelineEvents } from '@/data/timelineData';
 
 const selectedEvent = ref<TimelineEvent | null>(null);
 

@@ -21,7 +21,7 @@
 </template>
 
 <script setup lang="ts">
-import type { TimelineEvent } from '~/types/TimelineEvent';
+import type { TimelineEvent } from '@/types/TimelineEvent';
 
 interface Props {
   event: TimelineEvent | null;

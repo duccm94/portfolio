@@ -1,5 +1,7 @@
 <template>
   <div>
+    <HeroIntroduction />
+
     <h1>Duc CM</h1>
 
     <h2>My Timeline</h2>
