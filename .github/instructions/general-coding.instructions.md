@@ -9,6 +9,7 @@ applyTo: '**'
 - Comment functions, composables and complex logic
 - Use descriptive names for variables, functions and classes
 - Follow the DRY (Don't Repeat Yourself) principle
+- Only install new packages if really necessary
 
 ## Naming Conventions
 - Use PascalCase for components, interfaces, and type aliases
@@ -26,4 +27,4 @@ applyTo: '**'
 
 ## Linting & Formatting
 - Follow project's ESLint and Prettier configurations
-- Format code, fix all linting and type errors on save
+<!-- - Format code, fix all linting and type errors on save -->
