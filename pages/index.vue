@@ -7,6 +7,9 @@
 
     <h2>Certifications</h2>
     <MyCertification />
+
+    <h2>Tech Stack</h2>
+    <TechStack />
   </div>
 </template>
 
