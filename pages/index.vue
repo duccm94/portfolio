@@ -2,15 +2,10 @@
   <div>
     <HeroIntroduction />
 
-    <h1>Duc CM</h1>
-
-    <h2>My Timeline</h2>
     <MyTimeline />
 
-    <h2>Certifications</h2>
     <MyCertification />
 
-    <h2>Tech Stack</h2>
     <TechStack />
   </div>
 </template>
