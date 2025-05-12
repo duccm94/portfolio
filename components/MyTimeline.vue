@@ -32,12 +32,8 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import type { TimelineEvent } from '~/types/TimelineEvent';
+import { timelineEvents } from '~/data/timelineData';
 
-interface Props {
-  timelineEvents: TimelineEvent[];
-}
-
-const props = defineProps<Props>();
 const selectedEvent = ref<TimelineEvent | null>(null);
 
 function selectEvent(event: TimelineEvent) {
@@ -46,8 +42,8 @@ function selectEvent(event: TimelineEvent) {
 
 // Select the most recent event by default
 onMounted(() => {
-  if (props.timelineEvents.length > 0) {
-    selectEvent(props.timelineEvents[0]);
+  if (timelineEvents.length > 0) {
+    selectEvent(timelineEvents[0]);
   }
 });
 </script>
