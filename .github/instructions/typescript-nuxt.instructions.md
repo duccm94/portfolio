@@ -21,4 +21,5 @@ Apply the [general coding guidelines](./general-coding.instructions.md) to all c
 - Optimize images using `<NuxtImage>` and `<NuxtPicture>`
 
 ## Styling Guidelines
-- Use TailwindCSS with CSS modules for component styling
+- Apply mobile-first design
+- Use TailwindCSS classes for styling, avoid custom CSS where possible and only use CSS modules when necessary

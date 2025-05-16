@@ -3,21 +3,22 @@ import type { TimelineEvent } from '@/types/TimelineEvent';
 export const timelineEvents: TimelineEvent[] = [
   {
     id: '4',
-    startDate: '2022-03',
+    startDate: '2022/03',
     endDate: 'Present', // Add endDate, same as startDate for single-point event
     title: 'Backend Engineer',
     organization: 'KINTO Technologies Corporation',
     location: 'Tokyo, Japan',
-    shortDescription: 'Test',
+    shortDescription: 'TODO',
     detailedDescription: [
-      'Test'
+      'TODO',
+      'TODO',
     ],
     skills: ['TypeScript', 'Nuxt.js', 'Vue.js', 'Node.js', 'PostgreSQL', 'AWS']
   },
   {
     id: '3',
-    startDate: '2018-11',
-    endDate: '2022-02',
+    startDate: '2018/11',
+    endDate: '2022/02',
     title: 'Software Engineer, BrSE',
     organization: 'Hitachi Systems, Ltd.',
     location: 'Kanagawa, Japan',
@@ -31,8 +32,8 @@ export const timelineEvents: TimelineEvent[] = [
   },
   {
     id: '2',
-    startDate: '2017-11',
-    endDate: '2018-11',
+    startDate: '2017/11',
+    endDate: '2018/11',
     title: 'Full Stack Engineer',
     organization: 'ReasonWhy Inc.',
     location: 'Tokyo, Japan',
@@ -42,8 +43,8 @@ export const timelineEvents: TimelineEvent[] = [
   },
   {
     id: '1',
-    startDate: '2017-07',
-    endDate: '2017-11',
+    startDate: '2017/07',
+    endDate: '2017/11',
     title: 'Junior Software Engineer',
     organization: 'Sun* Inc. (formerly Framgia Inc.)',
     location: 'Hanoi, Vietnam',
@@ -53,8 +54,8 @@ export const timelineEvents: TimelineEvent[] = [
   },
   {
     id: '0',
-    startDate: '2017-08',
-    endDate: '2017-08',
+    startDate: '2017/08',
+    endDate: '2017/08',
     title: 'Graduation',
     organization: 'Hanoi University of Science and Technology (HUST)',
     location: 'Hanoi, Vietnam',
