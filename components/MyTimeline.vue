@@ -10,7 +10,7 @@
           v-for="event in timelineEvents"
           :key="event.id"
           :class="[
-            'p-5 my-4 ml-10 rounded-lg bg-white cursor-pointer relative hover:bg-gray-100',
+            'p-3 md:p-5 my-4 ml-10 rounded-lg bg-white cursor-pointer relative hover:bg-gray-100',
             { '!bg-indigo-100 shadow-lg': selectedEvent?.id === event.id }
           ]"
           @click="selectEvent(event)"
@@ -32,32 +32,64 @@
           </div>
           <!-- Event details -->
           <div class="block">
-            <p class="text-xs text-gray-500 mb-1">
-              {{ event.startDate }} - {{ event.endDate }}
-            </p>
-            <h3 class="text-lg font-semibold mb-1">{{ event.title }}</h3>
-            <p class="font-medium mb-1">{{ event.organization }}</p>
+            <TimelineEventProperty
+              icon-name="mdi:calendar-month-outline"
+              text-size-class="text-xs"
+            >
+              <span class="text-xs text-gray-500">{{ event.startDate }} - {{ event.endDate }}</span>
+            </TimelineEventProperty>
+            <TimelineEventProperty
+              icon-name="mdi:briefcase-outline"
+              text-size-class="text-lg"
+            >
+              <span class="text-lg font-semibold">{{ event.title }}</span>
+            </TimelineEventProperty>
+            <TimelineEventProperty
+              icon-name="mdi:domain"
+            >
+              <span class="font-medium">{{ event.organization }}</span>
+            </TimelineEventProperty>
 
             <!-- Expanded details for mobile, hidden on md and up -->
             <div v-if="selectedEvent?.id === event.id" class="md:hidden">
-              <p v-if="event.location" class="text-sm mb-1">{{ event.location }}</p>
-              <div v-if="event.skills && event.skills.length > 0" class="text-sm mb-1">
-                <span>Skills:</span> {{ event.skills.join(', ') }}
-              </div>
+              <TimelineEventProperty
+                v-if="event.location"
+                icon-name="mdi:office-building-marker-outline"
+                text-size-class="text-sm"
+              >
+                <span class="text-sm">{{ event.location }}</span>
+              </TimelineEventProperty>
+              <TimelineEventProperty
+                v-if="event.skills && event.skills.length > 0"
+                icon-name="mdi:laptop"
+                text-size-class="text-sm"
+              >
+                <span class="text-sm">{{ event.skills.join(', ') }}</span>
+              </TimelineEventProperty>
             </div>
 
-            <p class="text-sm">{{ event.shortDescription }}</p>
+            <TimelineEventProperty
+              icon-name="mdi:text-short"
+              text-size-class="text-sm"
+            >
+              <span class="text-sm">{{ event.shortDescription }}</span>
+            </TimelineEventProperty>
 
             <!-- Expanded details for mobile, hidden on md and up -->
-            <div v-if="selectedEvent?.id === event.id" class="md:hidden">
-              <div class="text-sm">
-                <template v-if="Array.isArray(event.detailedDescription)">
-                  <p v-for="(paragraph, index) in event.detailedDescription" :key="index" class="mb-1">{{ paragraph }}</p>
-                </template>
-                <template v-else>
-                  <p>{{ event.detailedDescription }}</p>
-                </template>
-              </div>
+            <div v-if="selectedEvent?.id === event.id" class="flex items-start gap-2 md:hidden">
+              <TimelineEventProperty
+                icon-name="mdi:text-long"
+                text-size-class="text-sm"
+              >
+                <div class="text-sm">
+                  <template v-if="Array.isArray(event.detailedDescription)">
+                    <MDC v-for="(paragraph, index) in event.detailedDescription" :key="index" :value="paragraph" class="mb-1" />
+                  </template>
+                  <template v-else>
+                    <MDC :value="event.detailedDescription" />
+                  </template>
+                </div>
+              </TimelineEventProperty>
             </div>
           </div>
         </li>

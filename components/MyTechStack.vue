@@ -11,7 +11,7 @@
           v-for="item in group" :key="item.name"
           class="inline-flex items-center bg-white rounded-lg gap-2 p-2 shadow hover:-translate-y-0.5 hover:shadow-md"
         >
-          <Icon v-if="item.icon" :class="['text-xl']" :name="item.icon" /> {{ item.name }}
+          <Icon v-if="item.icon" class="text-xl" :name="item.icon" /> {{ item.name }}
         </li>
       </ul>
     </div>
