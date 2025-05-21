@@ -36,7 +36,7 @@ export const certifications: Certification[] = [
     credentialUrl: 'https://google.accredible.com/043a4624-c6ef-4e5c-8310-2348b9396491',
   },
   {
-    name: 'Information Security Management Examination (SG - 情報セキュリティマネジメント試験)',
+    name: 'Information Security Management Examination (SG)',
     issuingOrganization: 'Information-technology Promotion Agency, Japan (IPA)',
     issueDate: '2022/07',
     description: 'Certified to perform tasks and roles for ensuring, maintaining, and improving information security in the department that uses information systems.',

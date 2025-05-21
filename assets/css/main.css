@@ -28,3 +28,8 @@
   }
 
 }
+
+.markdown-link {
+  @apply text-blue-500 hover:text-blue-700;
+  @apply underline decoration-blue-500 hover:decoration-blue-700;
+}

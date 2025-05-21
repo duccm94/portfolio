@@ -15,6 +15,12 @@ export interface Hero {
   title: string;
 
   /**
+   * An array of strings for typing animation.
+   * @example ['This is ^1000 first sentence.', 'This is second sentence.']
+   */
+  typing: string[];
+
+  /**
    * A short biography or personal statement.
    * @example "Passionate and experienced software engineer..."
    */

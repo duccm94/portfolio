@@ -10,7 +10,7 @@
           v-for="event in timelineEvents"
           :key="event.id"
           :class="[
-            'p-3 md:p-5 my-4 ml-10 rounded-lg bg-white cursor-pointer relative hover:bg-gray-100',
+            'p-3 md:p-5 my-4 ml-5 md:ml-10 rounded-lg bg-white cursor-pointer relative hover:bg-gray-100',
             { '!bg-indigo-100 shadow-lg': selectedEvent?.id === event.id }
           ]"
           @click="selectEvent(event)"
@@ -18,14 +18,14 @@
           <!-- Timeline marker -->
           <div
             :class="[
-              'absolute -left-12 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full',
+              'absolute -left-7 md:-left-12 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full',
               selectedEvent?.id === event.id ? 'bg-indigo-600' : 'bg-gray-400'
             ]"
           >
             <!-- Branch line from marker to event box -->
             <div
               :class="[
-                'absolute left-2 w-10 h-px top-1/2 -translate-y-1/2',
+                'absolute left-2 w-5 md:w-10 h-px top-1/2 -translate-y-1/2',
                 selectedEvent?.id === event.id ? 'bg-indigo-600' : 'bg-gray-400'
               ]"
             />
@@ -47,7 +47,7 @@
             <TimelineEventProperty
               icon-name="mdi:domain"
             >
-              <span class="font-medium">{{ event.organization }}</span>
+              <MDC :value="event.organization" class="font-medium" />
             </TimelineEventProperty>
 
             <!-- Expanded details for mobile, hidden on md and up -->

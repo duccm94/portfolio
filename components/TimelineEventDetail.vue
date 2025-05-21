@@ -16,7 +16,7 @@
       icon-name="mdi:domain"
       text-size-class="text-lg"
     >
-      <span class="text-lg font-medium">{{ event.organization }}</span>
+      <MDC :value="event.organization" class="text-lg font-medium" />
     </TimelineEventProperty>
     <TimelineEventProperty
       v-if="event.location"

@@ -14,6 +14,9 @@
       <div class="order-2 text-center md:text-left">
         <h1 class="text-4xl font-bold mb-2.5">{{ data.name }}</h1>
         <p class="text-2xl mb-5">{{ data.title }}</p>
+        <p class="text-xl mb-5">
+          <span id="typing-el" />
+        </p>
         <p class="text-lg mb-5 max-w-xl">{{ data.bio }}</p>
         <div
           v-if="data.socialLinks && data.socialLinks.length > 0"
@@ -31,7 +34,7 @@
           </a>
         </div>
         <p v-if="data.location" class="inline-flex items-center gap-2">
-          <Icon name="mdi:map-marker" class="text-xl" /> {{ data.location }}
+          <Icon name="mdi:home-heart" class="text-2xl" /> {{ data.location }}
         </p>
       </div>
     </div>
@@ -40,4 +43,16 @@
 
 <script setup lang="ts">
 import { heroData as data } from '@/data/heroData';
+import Typed from 'typed.js';
+
+onMounted(() => {
+  new Typed('#typing-el', {
+    strings: data.typing,
+    typeSpeed: 50,
+    backSpeed: 25,
+    backDelay: 1000,
+    loop: true,
+  })
+
+});
 </script>
