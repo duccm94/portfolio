@@ -97,6 +97,7 @@
       <!-- Detail view for md, hidden on smaller screens -->
       <TimelineEventDetail
         v-if="selectedEvent"
+        :key="selectedEvent.id"
         :event="selectedEvent"
         class="hidden md:block md:flex-[1.5]"
       />
