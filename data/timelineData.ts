@@ -10,8 +10,15 @@ export const timelineEvents: TimelineEvent[] = [
     location: 'Tokyo, Japan',
     shortDescription: 'TODO',
     detailedDescription: [
-      'TODO',
-      'TODO',
+      'Develop global ID system',
+      'Develop https://toyota-community.kinto-technologies.com/',
+      'https://blog.kinto-technologies.com/posts/Innovation-Days-01-en/',
+      'https://blog.kinto-technologies.com/posts/Innovation-Days-01/',
+      'https://blog.kinto-technologies.com/posts/Innovation-Days-02-en/',
+      'https://blog.kinto-technologies.com/posts/Innovation-Days-02/',
+      'https://blog.kinto-technologies.com/posts/Innovation-Days-03/',
+      'https://blog.kinto-technologies.com/posts/Innovation-Days-03-ja/',
+      'https://blog.kinto-technologies.com/posts/2024-12-03-toyota-community/',
     ],
     skills: ['TypeScript', 'Nuxt.js', 'Vue.js', 'Node.js', 'PostgreSQL', 'AWS']
   },

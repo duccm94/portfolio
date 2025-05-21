@@ -1,6 +1,6 @@
 <template>
   <section :id="id" :class="['py-6 md:py-10', backgroundClass]">
-    <div class="container mx-auto">
+    <div class="container mx-auto px-2 md:px-4">
       <slot />
     </div>
   </section>

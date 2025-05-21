@@ -1,12 +1,12 @@
 <template>
   <div>
-    <HeroIntroduction />
+    <MyHero />
 
     <MyTimeline />
 
     <MyCertification />
 
-    <TechStack />
+    <MyTechStack />
   </div>
 </template>
 

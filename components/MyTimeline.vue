@@ -4,43 +4,69 @@
     background-class="bg-slate-50"
   >
     <h2 class="text-3xl font-semibold mb-5">Career Journey</h2>
-    <div class="flex flex-col gap-5 relative md:flex-row md:items-start">
-      <ul class="list-none p-0 m-0 relative border-l-4 border-gray-300 ml-5 md:flex-1 md:max-w-[500px] md:mr-5">
-        <!-- Arrow tip for the timeline -->
-        <div class="absolute -top-0.5 -left-3 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[15px] border-b-gray-300" />
+    <div class="flex flex-col md:flex-row md:items-start gap-5">
+      <ul class="border-l-8 md:flex-1 md:max-w-[500px]">
         <li
           v-for="event in timelineEvents"
           :key="event.id"
           :class="[
-            'py-[15px] px-5 my-[15px] rounded-lg bg-gray-50 cursor-pointer transition-colors duration-300 ease-in-out relative pl-[30px] ml-10 hover:bg-gray-100',
-            { 'bg-indigo-100 shadow-sm': selectedEvent?.id === event.id }
+            'p-5 my-4 ml-10 rounded-lg bg-white cursor-pointer relative hover:bg-gray-100',
+            { '!bg-indigo-100 shadow-lg': selectedEvent?.id === event.id }
           ]"
           @click="selectEvent(event)"
         >
-          <div :class="[
-            'absolute -left-[50px] top-1/2 -translate-y-1/2 w-3 h-3 rounded-full border-2 border-white z-20',
-            selectedEvent?.id === event.id ? 'bg-indigo-700' : 'bg-indigo-500'
-          ]">
+          <!-- Timeline marker -->
+          <div
+            :class="[
+              'absolute -left-12 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full',
+              selectedEvent?.id === event.id ? 'bg-indigo-600' : 'bg-gray-400'
+            ]"
+          >
             <!-- Branch line from marker to event box -->
-            <div :class="[
-              'absolute top-1/2 left-4 w-[30px] h-0.5 -translate-y-1/2 z-10',
-              selectedEvent?.id === event.id ? 'bg-indigo-700' : 'bg-gray-300'
-            ]" />
+            <div
+              :class="[
+                'absolute left-2 w-10 h-px top-1/2 -translate-y-1/2',
+                selectedEvent?.id === event.id ? 'bg-indigo-600' : 'bg-gray-400'
+              ]"
+            />
           </div>
+          <!-- Event details -->
           <div class="block">
-              <p class="text-xs text-gray-500 mb-1">
-                {{ event.startDate }} - {{ event.endDate }}
-              </p>
-            <h3 class="text-lg font-bold mb-1 text-gray-800">{{ event.title }}</h3>
-            <p class="text-base text-gray-600 mb-2">{{ event.organization }}</p>
-            <p class="text-sm text-gray-500 leading-snug">{{ event.shortDescription }}</p>
+            <p class="text-xs text-gray-500 mb-1">
+              {{ event.startDate }} - {{ event.endDate }}
+            </p>
+            <h3 class="text-lg font-semibold mb-1">{{ event.title }}</h3>
+            <p class="font-medium mb-1">{{ event.organization }}</p>
+
+            <!-- Expanded details for mobile, hidden on md and up -->
+            <div v-if="selectedEvent?.id === event.id" class="md:hidden">
+              <p v-if="event.location" class="text-sm mb-1">{{ event.location }}</p>
+              <div v-if="event.skills && event.skills.length > 0" class="text-sm mb-1">
+                <span>Skills:</span> {{ event.skills.join(', ') }}
+              </div>
+            </div>
+
+            <p class="text-sm">{{ event.shortDescription }}</p>
+
+            <!-- Expanded details for mobile, hidden on md and up -->
+            <div v-if="selectedEvent?.id === event.id" class="md:hidden">
+              <div class="text-sm">
+                <template v-if="Array.isArray(event.detailedDescription)">
+                  <p v-for="(paragraph, index) in event.detailedDescription" :key="index" class="mb-1">{{ paragraph }}</p>
+                </template>
+                <template v-else>
+                  <p>{{ event.detailedDescription }}</p>
+                </template>
+              </div>
+            </div>
           </div>
         </li>
       </ul>
-      <TimelineEvent
+      <!-- Detail view for md, hidden on smaller screens -->
+      <TimelineEventDetail
         v-if="selectedEvent"
         :event="selectedEvent"
-        class="max-w-full md:flex-[1.5] md:sticky md:top-5 md:max-h-[calc(100vh-40px)] md:overflow-y-auto"
+        class="hidden md:block md:flex-[1.5]"
       />
     </div>
   </SectionWrapper>
@@ -48,7 +74,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import type { TimelineEvent as TimelineEventType } from '@/types/TimelineEvent'; // Renamed to avoid conflict
+import type { TimelineEvent as TimelineEventType } from '@/types/TimelineEvent';
 import { timelineEvents } from '@/data/timelineData';
 
 const selectedEvent = ref<TimelineEventType | null>(null);
@@ -60,7 +86,6 @@ function selectEvent(event: TimelineEventType) {
 // Select the most recent event by default
 onMounted(() => {
   if (timelineEvents.length > 0) {
-    // Ensure timelineEvents is correctly typed if it's imported directly
     selectEvent(timelineEvents[0] as TimelineEventType);
   }
 });
