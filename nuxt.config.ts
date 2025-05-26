@@ -3,6 +3,18 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
 
+  app: {
+    head: {
+      title: 'DucCM', // default fallback title
+      htmlAttrs: {
+        lang: 'en',
+      },
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/arsenal.svg' },
+      ]
+    }
+  },
+
   css: [
     '@/assets/css/main.css', // Added global CSS file
   ],

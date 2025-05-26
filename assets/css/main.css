@@ -21,15 +21,26 @@
     @apply text-sm;
   }
 
+  .markdown ul {
+    @apply list-disc;
+    ul {
+      @apply list-[circle] list-inside;
+    }
+  }
+
+  .markdown a {
+    @apply text-blue-500 hover:text-blue-700;
+    @apply underline decoration-blue-500 hover:decoration-blue-700;
+  }
+
   @screen md {
     html {
       @apply text-base;
     }
+
+    .markdown img {
+      @apply w-full max-w-screen-md;
+    }
   }
 
-}
-
-.markdown-link {
-  @apply text-blue-500 hover:text-blue-700;
-  @apply underline decoration-blue-500 hover:decoration-blue-700;
 }

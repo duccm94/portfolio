@@ -16,7 +16,7 @@
       icon-name="mdi:domain"
       text-size-class="text-lg"
     >
-      <MDC :value="event.organization" class="text-lg font-medium" />
+      <MDC :value="event.organization" class="markdown text-lg font-medium" />
     </TimelineEventProperty>
     <TimelineEventProperty
       v-if="event.location"
@@ -33,7 +33,7 @@
     <TimelineEventProperty
       icon-name="mdi:text-long"
     >
-      <div>
+      <div class="markdown">
         <template v-if="Array.isArray(event.detailedDescription)">
           <MDC v-for="(paragraph, index) in event.detailedDescription" :key="index" :value="paragraph" class="mb-1" />
         </template>
