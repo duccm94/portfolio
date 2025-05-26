@@ -113,13 +113,23 @@ import { timelineEvents } from '@/data/timelineData';
 const selectedEvent = ref<TimelineEventType | null>(null);
 
 function selectEvent(event: TimelineEventType) {
+  const isMdAndUp = window.matchMedia('(min-width: 768px)').matches;
+  if (selectedEvent.value?.id === event.id && !isMdAndUp) {
+    // Deselect if the same event is clicked
+    selectedEvent.value = null;
+    return;
+  }
+  // Select the clicked event
   selectedEvent.value = event;
 }
 
-// Select the most recent event by default
+// Select the most recent event by default on md and larger screens
 onMounted(() => {
   if (timelineEvents.length > 0) {
-    selectEvent(timelineEvents[0] as TimelineEventType);
+    const isMdAndUp = window.matchMedia('(min-width: 768px)').matches;
+    if (isMdAndUp) {
+      selectEvent(timelineEvents[0] as TimelineEventType);
+    }
   }
 });
 </script>

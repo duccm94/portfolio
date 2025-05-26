@@ -12,14 +12,14 @@ export const timelineEvents: TimelineEvent[] = [
     detailedDescription: [
       `Developing mobility related services:
 - Develop global ID system.
-- Participated and won the company’s hackathon - KINTO Global Innovation Days 2022 with my team Crew. ![Hackathon winning prize](https://drive.google.com/uc?export=view&id=1_zTCJRA1msctSKCEt4M_pshu8HNLn2ku)
+- Participated and won the company’s hackathon - KINTO Global Innovation Days 2022 with my team Crew. ![Hackathon winning prize](/hackathon-winning-prize.jpg)
   - About KINTO Global Innovation Days 2022: [in English](https://blog.kinto-technologies.com/posts/Innovation-Days-01-en/){:target="_blank"}, [in Japanese](https://blog.kinto-technologies.com/posts/Innovation-Days-01/){:target="_blank"}
   - On the day of the event: [in English](https://blog.kinto-technologies.com/posts/Innovation-Days-02-en/){:target="_blank"}, [in Japanese](https://blog.kinto-technologies.com/posts/Innovation-Days-02/){:target="_blank"}
   - Winning team interview: [in English](https://blog.kinto-technologies.com/posts/Innovation-Days-03/){:target="_blank"}, [in Japanese](https://blog.kinto-technologies.com/posts/Innovation-Days-03-ja/){:target="_blank"}
   - Developed [Toyota Community by KINTO](https://toyota-community.kinto-technologies.com/){:target="_blank"}
   - My teammate wrote [a blog article about the community]('https://blog.kinto-technologies.com/posts/2024-12-03-toyota-community/){:target="_blank"}
 - Got the Individual Award in the company’s annual award ceremony. ![Individual Award](/individual-award.png)
-- Won the MVP by having the highest score in 3 out of 4 programming languages in the company Secure Coding Tournament. ![Secure Coding MVP](https://drive.google.com/uc?export=view&id=19z_4U9y5_ql4cRjnrWXsgxPVy0W19AkM)`,
+- Won the MVP by having the highest score in 3 out of 4 programming languages in the company Secure Coding Tournament. ![Secure Coding MVP](/secure-coding-mvp.png)`,
     ],
     skills: ['Java', 'Spring', 'Python', 'HTML', 'CSS', 'Tailwind CSS', 'JavaScript', 'TypeScript', 'Vue.js', 'Nuxt.js', 'MySQL', 'Redis', 'AWS', 'OpenID', 'OpenAPI']
   },
