@@ -11,15 +11,21 @@ export const timelineEvents: TimelineEvent[] = [
     shortDescription: 'Developing mobility related services',
     detailedDescription: [
       `Developing mobility related services:
-- Develop global ID system.
-- Participated and won the company’s hackathon - KINTO Global Innovation Days 2022 with my team Crew. ![Hackathon winning prize](/hackathon-winning-prize.jpg)
-  - About KINTO Global Innovation Days 2022: [in English](https://blog.kinto-technologies.com/posts/Innovation-Days-01-en/){:target="_blank"}, [in Japanese](https://blog.kinto-technologies.com/posts/Innovation-Days-01/){:target="_blank"}
-  - On the day of the event: [in English](https://blog.kinto-technologies.com/posts/Innovation-Days-02-en/){:target="_blank"}, [in Japanese](https://blog.kinto-technologies.com/posts/Innovation-Days-02/){:target="_blank"}
-  - Winning team interview: [in English](https://blog.kinto-technologies.com/posts/Innovation-Days-03/){:target="_blank"}, [in Japanese](https://blog.kinto-technologies.com/posts/Innovation-Days-03-ja/){:target="_blank"}
-  - Developed [Toyota Community by KINTO](https://toyota-community.kinto-technologies.com/){:target="_blank"}
-  - My teammate wrote [a blog article about the community]('https://blog.kinto-technologies.com/posts/2024-12-03-toyota-community/){:target="_blank"}
-- Got the Individual Award in the company’s annual award ceremony. ![Individual Award](/individual-award.png)
-- Won the MVP by having the highest score in 3 out of 4 programming languages in the company Secure Coding Tournament. ![Secure Coding MVP](/secure-coding-mvp.png)`,
+- Developed global ID systems for services in Japan, Italy, Brazil, Thailand and Qatar. Enhanced existing applications and developed new systems. Maintained and monitored services in production.
+  - Raised and implemented GDPR related issues, such as credentials management and rotation, and consent withdrawal (opt-out).
+  - Implemented countermeasures against attacks, especially SMS pumping attacks, by rate limiting and captcha.
+  - Developed a new common ID system that allows users to use a single account across all KINTO services, and reduces development and maintenance costs in the future.
+  - Detected and resolved important issues such as external service policy violations, AGPL license public source code issue, or cost optimization.
+- Participated and won the company’s hackathon - KINTO Global Innovation Days 2022 with my team Crew. Follow the winning idea, built [Toyota Community by KINTO](https://toyota-community.kinto-technologies.com/){:target="_blank"} for Toyota enthusiasts.
+![Hackathon winning prize](/hackathon-winning-prize.jpg)
+  - KINTO Global Innovation Days 2022 overview [in English](https://blog.kinto-technologies.com/posts/Innovation-Days-01-en/){:target="_blank"}, or [in Japanese](https://blog.kinto-technologies.com/posts/Innovation-Days-01/){:target="_blank"}
+  - On the day of the event article [in English](https://blog.kinto-technologies.com/posts/Innovation-Days-02-en/){:target="_blank"}, or [in Japanese](https://blog.kinto-technologies.com/posts/Innovation-Days-02/){:target="_blank"}
+  - Our interview as winning team [in English](https://blog.kinto-technologies.com/posts/Innovation-Days-03/){:target="_blank"}, or [in Japanese](https://blog.kinto-technologies.com/posts/Innovation-Days-03-ja/){:target="_blank"}
+  - [From idea to reality story wrote by my teammate](https://blog.kinto-technologies.com/posts/2024-12-03-toyota-community/){:target="_blank"}
+- Got the Individual Award in the company’s annual award ceremony.
+![Individual Award](/individual-award.jpeg)
+- Won the MVP by having the highest score in 3 out of 4 programming languages in the company Secure Coding Tournament.
+![Secure Coding MVP](/secure-coding-mvp.png)`,
     ],
     skills: ['Java', 'Spring', 'Python', 'HTML', 'CSS', 'Tailwind CSS', 'JavaScript', 'TypeScript', 'Vue.js', 'Nuxt.js', 'MySQL', 'Redis', 'AWS', 'OpenID', 'OpenAPI']
   },
@@ -33,7 +39,10 @@ export const timelineEvents: TimelineEvent[] = [
     shortDescription: 'Worked as a tech lead for projects commissioned by the Tokyo Metropolitan Government, covering the entire development lifecycle from requirements definition to maintenance, and as a Bridge SE to ensure quality of deliverables.',
     detailedDescription: [
       `I served as both technical leader and Bridge SE, led the development of web systems commissioned by the Tokyo Metropolitan Government in a multinational team of engineers from Japan, Vietnam, China, and Myanmar. My work spanned wide range from basic design, detailed design to development, testing, and maintenance. I proactively identified and resolved critical issues, managed development schedules and ensured high-quality outputs. I regularly communicated with Japanese clients and Vietnamese offshore teams to clarify requirements and manage progress, conducted detailed reviews of deliverables to ensure deliverable quality. Key projects included:
-- [Tokyo Startup Station](https://startup-station.jp/){:target="_blank"}: Created design documents and developed the system using CakePHP. Built batch processes and data migration tools, implemented message queue for email delivery. Reviewed offshore source code. Detected critical issues such as SQL injection, missing transactions, and improper SQL mode. Optimized SQL query for statistics data from 2 minutes to less than 2 seconds. Implemented an SEO optimization to improve website ranking and visibility. Responsible for all testing levels and system maintenance. Also mentored junior developers and conducted code reviews to ensure code quality.
+- [Tokyo Startup Station](https://startup-station.jp/){:target="_blank"}: Created design documents and developed the system using CakePHP. Built batch processes and data migration tools, implemented message queue for email delivery. Reviewed offshore source code. Responsible for all testing levels and system maintenance. Also mentored junior developers and conducted code reviews to ensure code quality. Impressive results include:
+  - Detected critical issues such as SQL injection, missing transactions, and improper SQL mode.
+  - Optimized SQL query for statistics data from 2 minutes to less than 2 seconds.
+  - Implemented an SEO optimization to improve website visibility and ranking to top.
 - [Business Chance Navi](https://www.chancenavi.jp/bcn/){:target="_blank"}: Upgraded major versions for core components of the system, including PHP, CakePHP, WordPress, jQuery, and PostgreSQL. Hanlded numerous issues due to deprecated or removed features and resolved breaking changes.
 - [Tokyo Condominium Management Status Notification System](https://www.mansion-todokede.metro.tokyo.lg.jp/){:target="_blank"}: Developed and maintained using Java (Spring Boot). Fixed critical issues such as invalid data insertion, incorrect security context handling, and insufficient security configuration.`,
     ],

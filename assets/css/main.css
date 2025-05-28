@@ -23,8 +23,17 @@
 
   .markdown ul {
     @apply list-disc;
+
+    li {
+      @apply my-1.5;
+    }
+
     ul {
       @apply list-[circle] list-inside;
+
+      li {
+        @apply my-0;
+      }
     }
   }
 
@@ -39,7 +48,7 @@
     }
 
     .markdown img {
-      @apply w-full max-w-screen-md;
+      @apply w-full max-w-screen-sm;
     }
   }
 
