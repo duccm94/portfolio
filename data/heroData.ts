@@ -10,7 +10,7 @@ export const heroData: Hero = {
     'Developing...^500 Compiling...^500 Deploying dreams! 🚀',
   ],
   bio: 'Papa of a beautiful little princess. Passionate and experienced software engineer specializing in building modern web applications. Always eager to learn new technologies and contribute to impactful projects.',
-  avatarUrl: '/TODO.jpg',
+  avatarUrl: '/avatar.jpeg',
   avatarAlt: 'Duc CM',
   location: 'Yokohama, Kanagawa, Japan',
   socialLinks: [
