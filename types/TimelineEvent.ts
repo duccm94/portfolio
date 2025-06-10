@@ -9,6 +9,12 @@ export interface TimelineEvent {
   id: string;
 
   /**
+   * The type of the event, indicating whether it is related to work or education.
+   * @example "work" or "education"
+   */
+  type: 'work' | 'education';
+
+  /**
    * The start date of the event, in YYYY-MM-DD or YYYY-MM format.
    * @example "2020-01-15"
    */

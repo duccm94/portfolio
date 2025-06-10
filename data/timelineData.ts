@@ -3,6 +3,7 @@ import type { TimelineEvent } from '@/types/TimelineEvent';
 export const timelineEvents: TimelineEvent[] = [
   {
     id: '4',
+    type: 'work',
     startDate: '2022/03',
     endDate: 'Present', // Add endDate, same as startDate for single-point event
     title: 'Backend Engineer',
@@ -33,6 +34,7 @@ export const timelineEvents: TimelineEvent[] = [
   },
   {
     id: '3',
+    type: 'work',
     startDate: '2018/11',
     endDate: '2022/02',
     title: 'Software Engineer, BrSE',
@@ -52,6 +54,7 @@ export const timelineEvents: TimelineEvent[] = [
   },
   {
     id: '2',
+    type: 'work',
     startDate: '2017/11',
     endDate: '2018/11',
     title: 'Full-Stack Engineer',
@@ -71,6 +74,7 @@ export const timelineEvents: TimelineEvent[] = [
   },
   {
     id: '1',
+    type: 'work',
     startDate: '2017/07',
     endDate: '2017/11',
     title: 'Junior Software Engineer',
@@ -82,6 +86,7 @@ export const timelineEvents: TimelineEvent[] = [
   },
   {
     id: '0',
+    type: 'education',
     startDate: '2012/08',
     endDate: '2017/08',
     title: 'Graduation',

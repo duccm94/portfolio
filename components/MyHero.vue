@@ -3,7 +3,7 @@
     id="hero"
   >
     <div class="flex flex-col md:flex-row gap-6 md:gap-12 items-center md:justify-center mx-auto">
-      <div class="order-1">
+      <div class="order-1 shrink-0">
         <NuxtImg
           :src="data.avatarUrl"
           :alt="data.avatarAlt"

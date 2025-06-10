@@ -7,7 +7,7 @@
       <span class="text-sm text-gray-500">{{ event.startDate }} - {{ event.endDate }}</span>
     </TimelineEventProperty>
     <TimelineEventProperty
-      icon-name="mdi:briefcase-outline"
+      :icon-name="event.type === 'work' ? 'mdi:briefcase-outline' : 'mdi:school-outline'"
       text-size-class="text-xl"
     >
       <span class="text-xl font-semibold">{{ event.title }}</span>

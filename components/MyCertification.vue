@@ -3,7 +3,9 @@
     id="certifications"
     background-class="bg-slate-100"
   >
-    <h2 class="text-3xl font-semibold mb-5">Certifications</h2>
+    <h2 class="inline-flex items-center text-3xl font-semibold mb-5">
+      <Icon name="mdi:certificate-outline" class="mr-2" /> Certifications
+    </h2>
     <ul>
       <li
         v-for="(cert, index) in certifications" :key="index"

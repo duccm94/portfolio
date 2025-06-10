@@ -3,7 +3,9 @@
     id="timeline"
     background-class="bg-slate-50"
   >
-    <h2 class="text-3xl font-semibold mb-5">Career Journey</h2>
+    <h2 class="inline-flex items-center text-3xl font-semibold mb-5">
+      <Icon name="mdi:timeline-text-outline" class="mr-2" /> Career Journey
+    </h2>
     <div class="flex flex-col md:flex-row md:items-start gap-5">
       <ul class="border-l-8 md:flex-1 md:max-w-[500px]">
         <li
@@ -48,7 +50,7 @@
             </div>
 
             <TimelineEventProperty
-              icon-name="mdi:briefcase-outline"
+              :icon-name="event.type === 'work' ? 'mdi:briefcase-outline' : 'mdi:school-outline'"
               text-size-class="text-lg"
             >
               <span class="text-lg font-semibold">{{ event.title }}</span>

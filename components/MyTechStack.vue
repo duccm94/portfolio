@@ -3,7 +3,9 @@
     id="tech-stack"
     background-class="bg-slate-200"
   >
-    <h2 class="text-3xl font-semibold mb-5">Tech Stack</h2>
+    <h2 class="inline-flex items-center text-3xl font-semibold mb-5">
+      <Icon name="mdi:code-tags" class="mr-2" /> Tech Stack
+    </h2>
     <div v-for="(group, category) in groupedStack" :key="category" class="mb-8">
       <h3 class="text-xl font-medium mb-4 pl-2 border-l-4 border-indigo-500">{{ category }}</h3>
       <ul class="flex flex-wrap gap-4">
