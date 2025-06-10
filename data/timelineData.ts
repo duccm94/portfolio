@@ -25,7 +25,9 @@ export const timelineEvents: TimelineEvent[] = [
 - Got the Individual Award in the company’s annual award ceremony.
 ![Individual Award](/individual-award.jpeg)
 - Won the MVP by having the highest score in 3 out of 4 programming languages in the company Secure Coding Tournament.
-![Secure Coding MVP](/secure-coding-mvp.png)`,
+![Secure Coding MVP](/secure-coding-mvp.png)
+- Won the 3rd place in the Devlympics Tokyo Tournament.
+![Devlympics 3rd place](/devlympics-3rd-place.png)`,
     ],
     skills: ['Java', 'Spring', 'Python', 'HTML', 'CSS', 'Tailwind CSS', 'JavaScript', 'TypeScript', 'Vue.js', 'Nuxt.js', 'MySQL', 'Redis', 'AWS', 'OpenID', 'OpenAPI']
   },

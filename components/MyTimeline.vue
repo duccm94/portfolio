@@ -32,12 +32,21 @@
           </div>
           <!-- Event details -->
           <div class="block">
-            <TimelineEventProperty
-              icon-name="mdi:calendar-month-outline"
-              text-size-class="text-xs"
-            >
-              <span class="text-xs text-gray-500">{{ event.startDate }} - {{ event.endDate }}</span>
-            </TimelineEventProperty>
+            <div class="flex justify-between items-center">
+              <TimelineEventProperty
+                icon-name="mdi:calendar-month-outline"
+                text-size-class="text-xs"
+              >
+                <span class="text-xs text-gray-500">{{ event.startDate }} - {{ event.endDate }}</span>
+              </TimelineEventProperty>
+              <!-- Collapsible icon for mobile -->
+              <Icon
+                :name="selectedEvent?.id === event.id ? 'mdi:chevron-up' : 'mdi:chevron-down'"
+                class="md:hidden ml-2"
+                aria-hidden="true"
+              />
+            </div>
+
             <TimelineEventProperty
               icon-name="mdi:briefcase-outline"
               text-size-class="text-lg"
