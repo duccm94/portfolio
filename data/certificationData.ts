@@ -2,6 +2,11 @@ import type { Certification } from '@/types/Certification';
 
 export const certifications: Certification[] = [
   {
+    name: 'Business Japanese Proficiency Test (BJT) 417/800',
+    issuingOrganization: 'Japan External Trade Organization (JETRO)',
+    issueDate: '2024/04/27',
+  },
+  {
     name: 'Professional Data Engineer Certification',
     issuingOrganization: 'Google Cloud',
     organizationIcon: 'devicon:googlecloud',
