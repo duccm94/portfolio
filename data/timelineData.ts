@@ -18,17 +18,17 @@ export const timelineEvents: TimelineEvent[] = [
   - Developed a new common ID system that allows users to use a single account across all KINTO services, and reduces development and maintenance costs in the future.
   - Detected and resolved important issues such as external service policy violations, AGPL license public source code issue, or cost optimization.
 - Participated and won the company’s hackathon - KINTO Global Innovation Days 2022 with my team Crew. Follow the winning idea, built [Toyota Community by KINTO](https://toyota-community.kinto-technologies.com/){:target="_blank"} for Toyota enthusiasts.
-![Hackathon winning prize](/hackathon-winning-prize.jpg)
+![Hackathon winning prize](../../hackathon-winning-prize.jpg)
   - KINTO Global Innovation Days 2022 overview [in English](https://blog.kinto-technologies.com/posts/Innovation-Days-01-en/){:target="_blank"}, or [in Japanese](https://blog.kinto-technologies.com/posts/Innovation-Days-01/){:target="_blank"}
   - On the day of the event article [in English](https://blog.kinto-technologies.com/posts/Innovation-Days-02-en/){:target="_blank"}, or [in Japanese](https://blog.kinto-technologies.com/posts/Innovation-Days-02/){:target="_blank"}
   - Our interview as winning team [in English](https://blog.kinto-technologies.com/posts/Innovation-Days-03/){:target="_blank"}, or [in Japanese](https://blog.kinto-technologies.com/posts/Innovation-Days-03-ja/){:target="_blank"}
   - [From idea to reality story wrote by my teammate](https://blog.kinto-technologies.com/posts/2024-12-03-toyota-community/){:target="_blank"}
 - Got the Individual Award in the company’s annual award ceremony.
-![Individual Award](/individual-award.jpeg)
+![Individual Award](../../individual-award.jpeg)
 - Won the MVP by having the highest score in 3 out of 4 programming languages in the company Secure Coding Tournament.
-![Secure Coding MVP](/secure-coding-mvp.png)
+![Secure Coding MVP](../../secure-coding-mvp.png)
 - Won the 3rd place in the Devlympics Tokyo Tournament.
-![Devlympics 3rd place](/devlympics-3rd-place.png)`,
+![Devlympics 3rd place](../../devlympics-3rd-place.png)`, // Cloudflare Pages image path is duccm.pages.dev/xxx.jpg (seems using Cloudflare provider in Nuxt Image). GitHub Pages image path is duccm94.github.io/portfolio/_ipx/_/portfolio/xxx.jpg (default IPX provider), but images in markdown are not used directly with NuxtImg, so almost images don't exist under _ipx/x path, therefore need to add ../../ to fix this GitHub Pages issue.
     ],
     skills: ['Java', 'Spring', 'Python', 'HTML', 'CSS', 'Tailwind CSS', 'JavaScript', 'TypeScript', 'Vue.js', 'Nuxt.js', 'MySQL', 'Redis', 'AWS', 'OpenID', 'OpenAPI']
   },
